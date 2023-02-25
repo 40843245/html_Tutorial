@@ -25,7 +25,9 @@ It is special.
 In newer version of js, we can directly assign the value (without var , let, const )to a varaible to declare it. 
 
 However, there are difference between the above three ways.
-    
+
+In older versions of js, only the keyword var is available.
+
 ## NOTE 
 Note that in older version of js, it is NOT available.
 
@@ -120,4 +122,5 @@ and
     var x; // declaration.
     x=7;   // assignment.
     
-
+## Ref
+https://www.w3schools.com/js/js_variables.asp
