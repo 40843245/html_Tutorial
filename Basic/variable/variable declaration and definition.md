@@ -93,4 +93,17 @@ will output 7.
     
 # variable definition        
  
-  
+The definition refers declaration and assignment in one statement.
+
+## Examples
+
+They have same effect.
+
+    var x = 7;
+    
+and
+    
+    var x;
+    x=7;
+    
+
