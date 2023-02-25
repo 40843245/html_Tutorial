@@ -39,4 +39,5 @@ Here are examples of statements to declare variables without compiler error or r
 
 2)
     
+    
     let x;
