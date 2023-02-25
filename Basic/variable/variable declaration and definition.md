@@ -35,11 +35,11 @@ Here are examples of statements to declare variables without compiler error or r
 
 1)
   
-           var x;
+           var x; // declaration NOT definition.
 
 2)
       
-          let x;
+          let x; // declaration NOT definition.
          
 # assignment
 ## Intro
@@ -53,11 +53,11 @@ An equal symbol refers an assigment.
 
 1) To assign 2 to x.
 
-       x = 2;
+       x = 2; // assignment
 
 2) To assign x + 3 to x.
     
-        x = x + 3;
+        x = x + 3; // assignment
         
 ## NOTE
 NOTE that don't think it as an mathematical equation.
@@ -93,17 +93,17 @@ will output 7.
     
 # variable definition        
  
-The definition refers declaration and assignment in one statement.
+The definition refers declaration and initialization in one statement.
 
 ## Examples
 
 They have same effect.
 
-    var x = 7;
+    var x = 7; // declaration and definition.
     
 and
     
-    var x;
-    x=7;
+    var x; // declaration.
+    x=7;   // assignment.
     
 
