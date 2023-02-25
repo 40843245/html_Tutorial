@@ -8,4 +8,12 @@ That is, the results are same when we don't leave any comments and leave.
 
 But comments can make one easy understand about the code 
 
-<>
+Multiline comments  
+    <!--        Multiline comments           -->
+    
+ 
+Single line comment
+
+      // Single line comment
+      
+      
