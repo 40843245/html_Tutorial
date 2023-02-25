@@ -35,11 +35,10 @@ Here are examples of statements to declare variables without compiler error or r
 
 1)
   
-    var x;
+           var x;
 
 2)
     
     
-    let x;
-    
-3)
+          let x;
+  
