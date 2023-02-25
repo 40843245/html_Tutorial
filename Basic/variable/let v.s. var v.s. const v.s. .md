@@ -8,6 +8,7 @@ const stands for the word "constant".
 
 ## Example 
 These examples will either generate compiler error or runtime error.
+
 Ex1:
 
       function()
@@ -77,7 +78,16 @@ Ex1:
     }
 
     // Here x is 2
-    
+ 
+ ## Summary
+ Can NOT be redeclared:
+ let, const
+ 
+ Must be assigned immediately:
+ const
+ 
+ var is convenient for me, but it imposes potential problems.
+ 
  ## Ref
  
  https://www.w3schools.com/js/js_let.asp
