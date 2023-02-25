@@ -20,7 +20,7 @@ In js, to declare a variable, just simply type one of these
     
 Here, we don't talk about some details. Including 
     
-     1) The valid identifier.
+     1) The valid identifier. (See https://github.com/40843245/html_Tutorial/blob/main/Basic/identifier/valid%20identifier.md)
         
      2) The difference of var and let.
      
