@@ -40,4 +40,57 @@ Here are examples of statements to declare variables without compiler error or r
 2)
       
           let x;
+         
+# assignment
+## Intro
+Assignment can pass the rvalue (right-side value) into lvalue (left-side value).
+
+The value of left side identifier will be overrided.
+
+An equal symbol refers an assigment.
+
+## Examples
+
+1) To assign 2 to x.
+
+       x = 2;
+
+2) To assign x + 3 to x.
+    
+        x = x + 3;
+        
+## NOTE
+NOTE that don't think it as an mathematical equation.
+ 
+In mathematical equation,
+
+    x = x + 3 
+    => x - x = x + 3 - x
+    => 0 = 3 
+    => Impossible fact in math.
+    
+ But in programming language, it is wrong to say that it is impossible that
+ 
+        x = x + 3
+        
+ Why?
+ 
+ As I mentioned before, the statement
+ 
+    x = x + 3
+    
+will access the value of x then plus 3 
+
+, finnally put the result into x.
+
+Thus,
+
+    x = 4;
+    x = x + 3;
+    document.write(x);
+    
+will output 7.
+    
+# variable definition        
+ 
   
