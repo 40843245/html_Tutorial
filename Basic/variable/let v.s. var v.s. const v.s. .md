@@ -30,6 +30,7 @@ Ex2:
 
 ## Example 
 These examples will either generate compiler error or runtime error.
+
 Ex1:
 
       function()
@@ -39,6 +40,7 @@ Ex1:
       }
 
 These examples are allowed.
+
 Ex1:
 
       function()
@@ -67,6 +69,7 @@ That is, variables declared inside a { } block can be accessed from outside the 
 
 ## Example 
 These examples are allowed.
+
 Ex1:
 
      var x = 10;
@@ -81,9 +84,11 @@ Ex1:
  
  ## Summary
  Can NOT be redeclared:
+ 
  let, const
  
  Must be assigned immediately:
+ 
  const
  
  var is convenient for me, but it imposes potential problems.
