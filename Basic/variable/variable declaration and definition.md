@@ -41,3 +41,5 @@ Here are examples of statements to declare variables without compiler error or r
     
     
     let x;
+    
+3)
