@@ -18,11 +18,25 @@ In js, to declare a variable, just simply type one of these
    
     ,let
     
+    ,const
+    
+It is special. 
+
+In newer version of js, we can directly assign the value (without var , let, const )to a varaible to declare it. 
+
+However, there are difference between the above three ways.
+    
+## NOTE 
+Note that in older version of js, it is NOT available.
+
+That is, one must declare the variable with either var, let, and const.
+
+
 Here, we don't talk about some details. Including 
     
      1) The valid identifier. (See https://github.com/40843245/html_Tutorial/blob/main/Basic/identifier/valid%20identifier.md)
         
-     2) The difference of var and let.
+     2) The difference of var, let, const , and directly assignment.
      
      3) Global declaration v.s. local declaration.
   
