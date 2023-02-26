@@ -15,6 +15,10 @@ Ex2:
     
     }
     
+## Valid function declaration
+Same as an identifier.
+A function is consist of an identifier, () and {}
+
 ## Syntax 
 I will use lex to represent the syntax
 
@@ -27,8 +31,10 @@ I will use lex to represent the syntax
     {comma}  := , // Just a signle comma
     {leftCurly} := '{'
     {rightCurly} := '}'
+    {leftParen} := '('
+    {rightParen} := ')'
     {funcName} := {identifier}
     {parameter} := {identifier}
-    {function} := function({whitespace}*){funcName}({parameter}({parameter}{comma})*)({whitespace}*){leftCurly}({whitespace}*){rightCurly}
+    {function} := function({whitespace}*){funcName}{leftParen}{parameter}({parameter}{comma})*){rightParen}({whitespace}*){leftCurly}({whitespace}*){rightCurly}
     
   
