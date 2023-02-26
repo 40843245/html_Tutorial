@@ -1,6 +1,8 @@
 # YT IFrame API (intro the example from the following website.)
 First I paste the code from YT IFrame API website (which is available on the following link) as my example.
+
 ## Code
+
     <!DOCTYPE html>
       
       <html>
@@ -65,9 +67,16 @@ First I paste the code from YT IFrame API website (which is available on the fol
 
 ### 1. Event and callback functions
     
-    onPlayerReady(event) and onPlayerStateChange(event) are callback functions
+    onYouTubeIframeAPIReady(), onPlayerReady(event) and onPlayerStateChange(event) are callback functions
     
-The argument for events are defined as follows which indicates that
+part 1: For onYouTubeIframeAPIReady()
+
+It is a special callback function. It is a built-in function YT IFrame API that is invoked iff the YT frame API is ready (at the beginning of executing this file).
+
+Here, we override the callback function.
+     
+
+part 2:For onPlayerReady(event) and onPlayerStateChange(event) for events, they are defined as follows which indicates that
 
     events: {
                     'onReady': onPlayerReady,
@@ -173,7 +182,7 @@ which may execute the statement setTimeout(stopVideo, 6000); many times.
 
 (In code1, the statement will be executed at most once.)
 
- ### code5
+##### code5
  
                 //code5
                 function onPlayerStateChange(event) 
@@ -190,8 +199,87 @@ The code5 will also led to unexpected result. Since before the if-statement, don
 
 It is equivalent to code4 and code4.2 .
 
+### 3. Code and its intro  for the creating YT.Player object 
 
+            <div id="player"></div>
+
+            <script>
+                // 2. This code loads the IFrame Player API code asynchronously.
+                var tag = document.createElement('script');
+                tag.src = "https://www.youtube.com/iframe_api";
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                // 3. This function creates an <iframe> (and YouTube player)
+                //    after the API code downloads.
+                var player;
+                function onYouTubeIframeAPIReady() 
+                {
+                    player = new YT.Player('player', 
+                    {
+                    height: '600',
+                    width: '640',
+                    videoId: 'M7lc1UVf-VE',
+                    playerVars: 
+                        {
+                        'playsinline': 1
+                        }
+                        ,
+                    events: 
+                    {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                    }
+                    });
+                }
+                
+1. For the callback function  onYouTubeIframeAPIReady(), we have discussed in part 1 of 1.
+
+2. For the first argument of YT.player, it determines which element is used for the newly-created object by id.
+
+#### NOTE
+NOTE that 
+
+    1) It must takes the element with <div> tags.
+    
+    2) The value of first argument of YT.player must match the value of the attribute id of the element one used.
+    
+3. For the second argument of YT.player, it determines the basic info of the object.
+
+#### NOTE
+The second argument of YT.player must be a dictionary.
+
+height
+
+    height refers the height for the element holds.
+
+width
+
+    width refers the width for the element holds.
+
+videoId
+
+    videoId refers the videoId it will be played.
+    
+    It will play the video with url "https://www.youtube.com/watch?v=" + videoId .
+ 
+playerVars
+
+    I don't know. I'm NOT an expertise.
+
+events
+
+    events contains all infos. Once a specific event is triggered then the corresponding callback function will be executed.
+   
+    More details about it on the part 2 of 1.
+    
+#### NOTE
+NOTE that events must corresponding to a dictionary.
+                
 ## Ref
+
+For more details, methods and attribute of YT.Player, visit on the following website.
+
 Google Docs
 
 https://developers.google.com/youtube/iframe_api_reference
